@@ -3,7 +3,7 @@ const logger = require('../logdna');
 
 
 const es = elasticsearch.Client({
-    host: 'https://kps006bpna:50m4shjipy@first-cluster-6944871336.eu-west-1.bonsaisearch.net',
+    host: process.env.REACT_APP_SEARCHLY_URL,
     log: 'trace'
 });
 

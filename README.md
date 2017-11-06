@@ -7,21 +7,23 @@ Its main application is against **degree fraud**.
 If a graduate is not listed in our database, either:
 - That person graduated before March 1999.
 - The person may have studied at the University of Geneva, but never graduated.
-- In the rare chance, there may be an omission from the official graduate list publications at http://www.unige.ch/palmares/.
+- In the rare chance, there may be an omission from the official graduate list publication.
 
 For API access to the elasticsearch instance, please message me directly.
 
-This is an unofficial verification system, the project is not supported by the University of Geneva. Names can be double-checked in the (non-searchable) official publication: http://www.unige.ch/palmares/
+This is an unofficial verification system, this project is not supported by the University of Geneva. A person's degree can be double-checked in the (non-searchable) official publication: http://www.unige.ch/palmares/
 
-Tech stack: Node.js, Elasticsearch, Searchkit & React.
+### Tech stack: Node.js, Elasticsearch, Searchkit & React.
 
-## Back-end stack for scraping the University's alumni pages: http://www.unige.ch/palmares/
-Run 'backend_server/server.js' to execute the scraper at 'backend_server/routes/scrape.js' and save the student data
+## Back-end with Node.js to scrape the University's alumni pages: http://www.unige.ch/palmares/
+Run 'backend_server/server.js' to execute the [scraper](https://github.com/tannera/palmares_unige/blob/master/backend_server/routes/scrape.js) and save the student data
 into backend_server/data/students.json
+
+The scraper handles the changing DOM structure between the different years.
 
 Stack:
 - superAgent: http request library - https://github.com/visionmedia/superagent
-- superAgent charset: to handle iso-8859-1 legacy pages.
+- superAgent-charset: to handle iso-8859-1 legacy pages.
 - cheerio: server-side jQuery https://github.com/cheeriojs/cheerio
 
 ## Back-end stack to create an index, map, and import the student data into an Elasticsearch (ES) instance.
