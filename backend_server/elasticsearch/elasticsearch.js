@@ -1,7 +1,7 @@
 const elasticsearch = require('elasticsearch');
-const logger = require('../logdna');
+const logger = require('../logdna'); // optional logger
 
-
+// Elasticsearch instance details. Replace 'process.env.REACT_APP_SEARCHLY_URL' with 'localhost:9200' if running locally.
 const es = elasticsearch.Client({
     host: process.env.REACT_APP_SEARCHLY_URL,
     log: 'trace'
@@ -9,6 +9,7 @@ const es = elasticsearch.Client({
 
 const INDEX_NAME = 'students';
 const INDEX_TYPE = 'details';
+
 
 function indexExists() {
     return es.indices.exists({
