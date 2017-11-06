@@ -1,6 +1,19 @@
-## Palmarès de l'UNIGE (Moteur de recherche) - Search engine to verify, search for alumni of the University of Geneva.
+## http://www.unige.info - Palmarès de l'UNIGE (Moteur de recherche)
 
-## Node.js, Elasticsearch, Searchkit & React.
+Web service and Elasticsearch API to verify in real-time if an alumni's self-reported degree obtained from the University of Geneva is genuine.
+
+Its main application is against **degree fraud**.
+
+If a graduate is not listed in our database, either:
+- That person graduated before March 1999.
+- The person may have studied at the University of Geneva, but never graduated.
+- In the rare chance, there may be an omission from the official graduate list publications at http://www.unige.ch/palmares/.
+
+For API access to the elasticsearch instance, please message me directly.
+
+This is an unofficial verification system, the project is not supported by the University of Geneva. Names can be double-checked in the (non-searchable) official publication: http://www.unige.ch/palmares/
+
+Tech stack: Node.js, Elasticsearch, Searchkit & React.
 
 ## Back-end stack for scraping the University's alumni pages: http://www.unige.ch/palmares/
 Run 'backend_server/server.js' to execute the scraper at 'backend_server/routes/scrape.js' and save the student data
@@ -26,3 +39,5 @@ Stack:
 - Searchkit
 - ReactJS (ES6)
 - LESS
+
+
