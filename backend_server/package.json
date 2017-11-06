@@ -1,0 +1,23 @@
+{
+  "name": "backend_palmares",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "dotenv": "^4.0.0",
+    "elasticsearch": "^13.3.1",
+    "express": "~4.15.5",
+    "logdna": "^1.4.0",
+    "morgan": "~1.9.0",
+    "node-env-file": "^0.1.8",
+    "promise": "^8.0.1",
+    "request": "^2.83.0",
+    "serve-favicon": "~2.4.5",
+    "superagent": "^3.6.2",
+    "superagent-charset": "^1.2.0",
+    "superagent-es6-promise": "^1.0.0"
+  }
+}

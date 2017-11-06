@@ -1,0 +1,317 @@
+
+/*------------------------------------*\
+ #Variables
+\*------------------------------------*/
+@bw: 3px; // border width
+
+
+
+
+
+/*------------------------------------*\
+#Tables
+\*------------------------------------*/
+
+.Rtable {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 1em 0;
+  padding: 0;
+  position: relative;
+  top: @bw;
+  left: @bw; //compensate for border offset
+}
+
+
+
+
+
+
+/*------------------------------------*\
+ Apply styles
+\*------------------------------------*/
+
+h2{
+  text-align: center;
+  color: black;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,700);
+html {
+  height: 100%;
+  background-color: #EEE;
+}
+
+.search1 {
+  box-sizing: border-box;
+  min-height: 616px;
+  margin: 0 auto;
+  padding: 2em;
+  max-width: 1000px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.0em;
+  background-color: #eee;
+  //border: double 3px #DDD;
+  border-top: none;
+  border-bottom: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+.Rtable-cell {
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 100%; // Default to full width
+  padding: 0.8em 1.2em;
+  overflow: hidden; // Or flex might break
+  list-style: none;
+  border: solid @bw #d80669;
+  margin: -@bw 0 0 -@bw; //border collapse offset
+}
+
+/* Table column sizing
+================================== */
+
+.Rtable--3cols > .Rtable-cell {
+  width: 33.33%;
+}
+
+.Rtable--3cols > .Rtable-cell  {
+  width: 33.33%;
+}
+
+
+
+
+
+/*------------------------------------*\
+#Searchkit-theme-css
+\*------------------------------------*/
+
+.sk-search-box form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  position: relative
+}
+
+.sk-search-box__icon {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 20px 20px;
+  flex: 0 20px 20px;
+  margin: 10px 0 0 10px;
+}
+
+.sk-search-box__icon:before {
+  content: "";
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KCgo8IS0tIFRoZSBpY29uIGNhbiBiZSB1c2VkIGZyZWVseSBpbiBib3RoIHBlcnNvbmFsIGFuZCBjb21tZXJjaWFsIHByb2plY3RzIHdpdGggbm8gYXR0cmlidXRpb24gcmVxdWlyZWQsIGJ1dCBhbHdheXMgYXBwcmVjaWF0ZWQuIApZb3UgbWF5IE5PVCBzdWItbGljZW5zZSwgcmVzZWxsLCByZW50LCByZWRpc3RyaWJ1dGUgb3Igb3RoZXJ3aXNlIHRyYW5zZmVyIHRoZSBpY29uIHdpdGhvdXQgZXhwcmVzcyB3cml0dGVuIHBlcm1pc3Npb24gZnJvbSBpY29ubW9uc3RyLmNvbSAtLT4KCgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgoKPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoKCSB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KCjxwYXRoIGlkPSJtYWduaWZpZXItMi1pY29uIiBkPSJNNDYwLjM1NSw0MjEuNTlMMzUzLjg0NCwzMTUuMDc4YzIwLjA0MS0yNy41NTMsMzEuODg1LTYxLjQzNywzMS44ODUtOTguMDM3CgoJQzM4NS43MjksMTI0LjkzNCwzMTAuNzkzLDUwLDIxOC42ODYsNTBDMTI2LjU4LDUwLDUxLjY0NSwxMjQuOTM0LDUxLjY0NSwyMTcuMDQxYzAsOTIuMTA2LDc0LjkzNiwxNjcuMDQxLDE2Ny4wNDEsMTY3LjA0MQoKCWMzNC45MTIsMCw2Ny4zNTItMTAuNzczLDk0LjE4NC0yOS4xNThMNDE5Ljk0NSw0NjJMNDYwLjM1NSw0MjEuNTl6IE0xMDAuNjMxLDIxNy4wNDFjMC02NS4wOTYsNTIuOTU5LTExOC4wNTYsMTE4LjA1NS0xMTguMDU2CgoJYzY1LjA5OCwwLDExOC4wNTcsNTIuOTU5LDExOC4wNTcsMTE4LjA1NmMwLDY1LjA5Ni01Mi45NTksMTE4LjA1Ni0xMTguMDU3LDExOC4wNTZDMTUzLjU5LDMzNS4wOTcsMTAwLjYzMSwyODIuMTM3LDEwMC42MzEsMjE3LjA0MQoKCXoiLz4KCjwvc3ZnPgoK) no-repeat 0 0;
+  background-size: contain;
+  height: 20px;
+  width: 20px;
+  display: block
+}
+
+.sk-search-box input.sk-search-box__text {
+  padding: 10px 20px;
+  width: 100%;
+  -webkit-box-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  font-size: 18px;
+  border: none;
+  height: auto;
+  height: -moz-available;
+  height: -webkit-fill-available;
+  line-height: normal;
+  color: #d80669;
+  background-color: #eee;
+}
+
+.sk-search-box input.sk-search-box__text:focus {
+  outline: 0
+}
+
+.sk-search-box__action {
+  height: 40px;
+  visibility: hidden
+}
+
+//.sk-search-box__loader {
+//  -webkit-box-flex: 0;
+//  -ms-flex: 0 20px 20px;
+//  flex: 0 20px 20px;
+//  -ms-flex-item-align: end;
+//  align-self: flex-end;
+//  margin: 10px
+//}
+//
+//.sk-search-box__loader.is-hidden {
+//  display: none
+//}
+//
+//.sk-hits-stats__info {
+//  font-size: 14px;
+//  color: #777
+//}
+
+.sk-action-button, .sk-no-hits__step-action, .sk-range-input__submit {
+  border: 1px solid #ccc;
+  color: #08c;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  outline: none
+}
+
+.sk-action-button:hover, .sk-no-hits__step-action:hover, .sk-range-input__submit:hover {
+  text-decoration: underline
+}
+
+.sk-action-button:active, .sk-no-hits__step-action:active, .sk-range-input__submit:active {
+  color: #000
+}
+
+.sk-no-hits {
+  text-align: center;
+  margin-top: 60px;
+  color: #444
+}
+
+.sk-no-hits__info {
+  font-size: 14px
+}
+
+.sk-no-hits__steps {
+  margin-top: 20px
+}
+
+.sk-search-box {
+  -webkit-box-flex: 1;
+  -ms-flex: auto;
+  flex: auto;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 20px;
+  border: 3px solid #d80669;
+  left: 0;
+  right: 0;
+  height: 41px;
+  max-width: 1000px;
+}
+
+.Rtable-container{
+  margin-top: 30px;
+}
+
+.Rtable-cell--alignMiddle {
+  display: flex;
+  align-items: center;
+}
+
+.Rtable-cell--alignCenter {
+  text-align: center;
+}
+
+
+
+
+/*------------------------------------*\
+   #Placeholder
+\*------------------------------------*/
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:    #d80669;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #d80669;
+  opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #d80669;
+  opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:    #d80669;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color:    #d80669;
+}
+
+
+
+
+/*------------------------------------*\
+   #Responsive
+\*------------------------------------*/
+@breakpoint: 500px;
+
+@media all and (max-width: @breakpoint) {
+  .Rtable--collapse {
+    display: block;
+    > .Rtable-cell {
+      width: 100% !important;
+    }
+    > .Rtable-cell--foot {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+ #Non-Flex modernizer fallback
+\*------------------------------------*/
+
+.no-flexbox .Rtable {
+  display: block;
+  > .Rtable-cell {
+    width: 100%;
+  }
+  > .Rtable-cell--foot {
+    margin-bottom: 1em;
+  }
+}
+
+
+
+
+
+
+/*------------------------------------*\
+ #cell-styles
+\*------------------------------------*/
+.Rtable-cell--header {
+  background-color: #d80669;
+  color: white;
+  > h1, > h2, > h3, > h4, > h5, > h6 {
+    color: white;
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+ #Inherit header and footer styles
+\*------------------------------------*/
+
+.Rtable-cell--head {
+  .Rtable-cell--header;
+}
